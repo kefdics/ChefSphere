@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chefs — Chef's Sphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">Chef's Sphere</h1>
+      <div class="slogan">Where Culinary Talent Meets Opportunity</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="chefs.html" class="active">Chefs</a>
+        <a href="bookings.html">Book a Chef</a>
+        <a href="forum.html">Community Forum</a>
+        <a href="schools.html">Partner Schools</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap grid-2">
+    <section>
+      <h2>Register as a Chef</h2>
+      <p>Complete the form to create a chef profile. A small registration fee is requested to help verify profiles and support the community.</p>
+
+      <form id="chef-register" class="card form">
+        <label>
+          Full name
+          <input type="text" id="chef_name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="chef_email" required>
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" id="chef_phone" placeholder="+267 ..." required>
+        </label>
+
+        <label>
+          Location / City
+          <input type="text" id="chef_city" required>
+        </label>
+
+        <label>
+          Chef Level
+          <select id="chef_level" required>
+            <option>Apprentice</option>
+            <option>Line Cook</option>
+            <option>Chef de Partie</option>
+            <option>Sous Chef</option>
+            <option>Head Chef</option>
+            <option>Executive Chef</option>
+          </select>
+        </label>
+
+        <label>
+          Specialties (comma separated)
+          <input type="text" id="chef_specialties" placeholder="e.g. Pastry, Contemporary African" >
+        </label>
+
+        <label>
+          Short bio
+          <textarea id="chef_bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+        </label>
+
+        <fieldset>
+          <legend>Registration fee — simulated payment</legend>
+          <p class="muted">This demo simulates payments and stores a mock "paid" flag in your browser.</p>
+
+          <label>Choose payment method</label>
+          <div class="pay-row">
+            <label class="pay-option"><input type="radio" name="pay_method" value="card" checked> Visa / Mastercard</label>
+            <label class="pay-option"><input type="radio" name="pay_method" value="paypal"> PayPal</label>
+          </div>
+
+          <div id="card-fields">
+            <label>Cardholder name <input id="card_name" type="text" /></label>
+            <label>Card number <input id="card_number" inputmode="numeric" pattern="[0-9\s]{13,19}" placeholder="1234 5678 9012 3456" /></label>
+            <div class="row">
+              <label>Expiry <input id="card_expiry" placeholder="MM/YY" /></label>
+              <label>CVC <input id="card_cvc" inputmode="numeric" pattern="[0-9]{3,4}" /></label>
+            </div>
+          </div>
+
+        </fieldset>
+
+        <div class="form-actions">
+          <button class="btn" id="chef-register-submit" type="button">Register & Pay (Simulate)</button>
+        </div>
+      </form>
+
+      <div id="chef-register-result" class="card hidden"></div>
+    </section>
+
+    <aside>
+      <h2>Job Listings</h2>
+      <p>Filter jobs by chef level to see appropriate roles.</p>
+
+      <div id="jobs-list">
+        <!-- jobs will be rendered by script -->
+      </div>
+
+      <p class="muted small">Tip: Jobs in this demo are locally stored and interactive.</p>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year3"></span> Chef's Sphere</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

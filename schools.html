@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Partner Schools — Chef's Sphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">Chef's Sphere</h1>
+      <div class="slogan">Where Culinary Talent Meets Opportunity</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="bookings.html">Book a Chef</a>
+        <a href="forum.html">Community Forum</a>
+        <a href="schools.html" class="active">Partner Schools</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Partner Schools</h2>
+    <p>Students from our partner institutions can apply to programs here.</p>
+
+    <ul class="partners card">
+      <li>Botswana Accountancy College</li>
+      <li>Boswa Culinary Institute</li>
+      <li>Gaborone College of Culinary Arts</li>
+      <li>Abbie Culinary Arts Academy & Hospitality</li>
+      <li>Kenya Utalii College</li>
+      <li>University of Derby</li>
+      <li>Le Cordon Bleu</li>
+    </ul>
+
+    <section class="card">
+      <h3>Student Program Application</h3>
+      <form id="student-apply" class="form">
+        <label>
+          Full name
+          <input id="stu_name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="stu_email" required>
+        </label>
+
+        <label>
+          Phone
+          <input id="stu_phone" required>
+        </label>
+
+        <label>
+          Partner School
+          <select id="stu_school" required>
+            <option>Botswana Accountancy College</option>
+            <option>Boswa Culinary Institute</option>
+            <option>Gaborone College of Culinary Arts</option>
+            <option>Abbie Culinary Arts Academy & Hospitality</option>
+            <option>Kenya Utalii College</option>
+            <option>University of Derby</option>
+            <option>Le Cordon Bleu</option>
+          </select>
+        </label>
+
+        <label>
+          Program interested in
+          <input id="stu_program" placeholder="e.g. Professional Chef Diploma">
+        </label>
+
+        <label>
+          Short statement (why you want to join)
+          <textarea id="stu_statement" rows="4"></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button class="btn" id="stu-submit" type="button">Apply</button>
+        </div>
+      </form>
+
+      <div id="stu-result" class="card hidden"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year6"></span> Chef's Sphere</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year6').textContent = new Date().getFullYear();</script>
+</body>
+</html>

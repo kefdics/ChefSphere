@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Chef's Sphere — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">Chef's Sphere</h1>
+      <div class="slogan">Where Culinary Talent Meets Opportunity</div>
+      <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="bookings.html">Book a Chef</a>
+        <a href="forum.html">Community Forum</a>
+        <a href="schools.html">Partner Schools</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h2>Where food becomes memory</h2>
+      <p>At Chef's Sphere we connect passionate chefs, aspiring students, and clients who want unforgettable culinary experiences. From intimate dinners to large events — find the right chef for the job.</p>
+      <div class="hero-cta">
+        <a class="btn" href="bookings.html">Book a Chef</a>
+        <a class="btn ghost" href="chefs.html">Become a Chef</a>
+      </div>
+    </section>
+
+    <section class="features">
+      <article>
+        <h3>Book chefs for events</h3>
+        <p>Search chefs by cuisine, experience level, or location and book them for your event with a simple form.</p>
+      </article>
+      <article>
+        <h3>Chef registration & jobs</h3>
+        <p>Chefs can register, pay a small registration fee, and apply for listed jobs that match their level in our hierarchy.</p>
+      </article>
+      <article>
+        <h3>Community & schools</h3>
+        <p>A collaborative forum helps chefs share ideas. Students from partner schools can apply for culinary programs.</p>
+      </article>
+    </section>
+
+    <section class="showcase card">
+      <h3>Celebrating culinary beauty</h3>
+      <p>Cooking is art — of texture, timing, color, and heart. Our chefs bring craft and ceremony to every plate. Explore recipes, techniques and stories from the community.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year"></span> Chef's Sphere — All rights reserved.</p>
+      <p class="small">This demo stores data locally in your browser (no real payments). Use Live Server in VS Code for best preview.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

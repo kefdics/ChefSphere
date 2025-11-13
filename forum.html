@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Community Forum — Chef's Sphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">Chef's Sphere</h1>
+      <div class="slogan">Where Culinary Talent Meets Opportunity</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="bookings.html">Book a Chef</a>
+        <a href="forum.html" class="active">Community Forum</a>
+        <a href="schools.html">Partner Schools</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Chef Community</h2>
+    <p>Share recipes, ask for feedback, and collaborate. Posts and replies are saved in your browser (localStorage).</p>
+
+    <section class="card">
+      <h3>Start a new topic</h3>
+      <form id="new-topic" class="small-form">
+        <label>Title <input id="topic-title" required></label>
+        <label>Message <textarea id="topic-message" rows="4" required></textarea></label>
+        <label>Your name <input id="topic-author"></label>
+        <div class="form-actions">
+          <button class="btn" id="topic-submit" type="button">Post topic</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="threads" class="threads"></section>
+
+    <p class="muted small">Note: For production, a backend + moderation is recommended.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year5"></span> Chef's Sphere</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year5').textContent = new Date().getFullYear();</script>
+</body>
+</html>

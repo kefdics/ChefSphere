@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book a Chef — Chef's Sphere</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="logo">Chef's Sphere</h1>
+      <div class="slogan">Where Culinary Talent Meets Opportunity</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="chefs.html">Chefs</a>
+        <a href="bookings.html" class="active">Book a Chef</a>
+        <a href="forum.html">Community Forum</a>
+        <a href="schools.html">Partner Schools</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h2>Book a Chef for your event</h2>
+    <p>Fill in the details and we'll match you with available chefs. This demo stores booking requests locally.</p>
+
+    <form id="booking-form" class="card form">
+      <label>
+        Your name
+        <input type="text" id="client_name" required>
+      </label>
+
+      <label>
+        Email
+        <input type="email" id="client_email" required>
+      </label>
+
+      <label>
+        Phone
+        <input type="tel" id="client_phone" required>
+      </label>
+
+      <label>
+        Event type
+        <select id="event_type" required>
+          <option>Private dinner</option>
+          <option>Wedding</option>
+          <option>Corporate function</option>
+          <option>Catering for party</option>
+          <option>Cooking class</option>
+        </select>
+      </label>
+
+      <label>
+        Event date
+        <input type="date" id="event_date" required>
+      </label>
+
+      <label>
+        Number of guests
+        <input type="number" id="guests" min="1" required>
+      </label>
+
+      <label>
+        Cuisine preference / notes
+        <textarea id="notes" rows="4" placeholder="Allergies, dietary requirements, style..."></textarea>
+      </label>
+
+      <fieldset>
+        <legend>Preferred chef level and budget</legend>
+        <label>Chef level
+          <select id="preferred_level">
+            <option>Apprentice</option>
+            <option>Line Cook</option>
+            <option>Chef de Partie</option>
+            <option>Sous Chef</option>
+            <option>Head Chef</option>
+            <option>Executive Chef</option>
+          </select>
+        </label>
+
+        <label>Budget (approx.) <input type="number" id="budget" min="0" step="1" placeholder="e.g. 1500" /></label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button class="btn" id="booking-submit" type="button">Request booking</button>
+      </div>
+    </form>
+
+    <div id="booking-result" class="card hidden"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© <span id="year4"></span> Chef's Sphere</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+</body>
+</html>
